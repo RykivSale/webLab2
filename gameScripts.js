@@ -6,8 +6,9 @@ let documentWidth = gameBar.scrollWidth-40;
 let liveTime = 900;
 let generationOfNewTargetTime = 1000;
 let score = 0;
-
+let counter = 5;
 let recordList = []
+let difficult = "Easy";
 document.addEventListener("DOMContentLoaded", ()=>{ 
     try{
         recordList = JSON.parse(localStorage.getItem("recordList"))
@@ -43,14 +44,18 @@ function resultChecker(score){
 function setDifficulty(e){
     switch(e.target.value){
         case 'Easy':
+            difficult = 'Easy'
             counter=5;
             break;
         case 'Normal':
+            difficult = 'Normal'
             counter = 10;
             liveTime = 800;
             generationOfNewTargetTime = 500; 
             break;
         case 'Hard':
+            difficult = 'Hard'
+            counter = 30;
             liveTime = 700;
             generationOfNewTargetTime = 250;
             break;
@@ -77,7 +82,7 @@ function hit(e)
     document.querySelector("#score").innerHTML=`Попаданий ${score}`
 }
 
-let counter = 5;
+
 function startGame()
 {
     document.querySelector("#score").innerHTML=`Попаданий ${score}`
@@ -122,7 +127,7 @@ function startGame()
         clearInterval(intervalID);
         console.log("f")
         document.querySelector("#startbutton").removeAttribute("disabled")
-        counter = 30;
+        setDifficulty({"target":{"value":difficult}})
         resultChecker(score)
         document.querySelector("#counter").innerHTML=`Жизней xxx`
         updateTable();
