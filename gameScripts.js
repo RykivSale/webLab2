@@ -43,8 +43,10 @@ function resultChecker(score){
 function setDifficulty(e){
     switch(e.target.value){
         case 'Easy':
+            counter=5;
             break;
         case 'Normal':
+            counter = 10;
             liveTime = 800;
             generationOfNewTargetTime = 500; 
             break;
