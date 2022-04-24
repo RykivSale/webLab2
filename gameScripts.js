@@ -124,7 +124,7 @@ function startGame()
         document.querySelector("#startbutton").removeAttribute("disabled")
         counter = 30;
         resultChecker(score)
-
+        document.querySelector("#counter").innerHTML=`Жизней xxx`
         updateTable();
         score = 0;
     } 
