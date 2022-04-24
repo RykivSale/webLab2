@@ -1,0 +1,65 @@
+.target {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: crimson;
+    position: absolute;
+    cursor:pointer;
+}
+h3{
+    white-space: nowrap;
+    margin: 0;
+}
+.menu{
+    display: flex;
+    width: 20%;
+    gap:20px;
+}
+.main_menu{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+button{
+    transition: .3s;
+    background-color: white;
+    border: 2px solid black;
+    outline: none;
+    padding: 5px;
+    cursor: pointer;
+}
+button:hover{
+    transition: .3s;
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+    outline: none;
+    padding: 5px;
+}
+tr{
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+    padding: 3px;
+    width: 73px;
+    height: 20px;
+}
+select{
+    padding: 3px;
+} 
+.game{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.game_title{
+    display: flex;
+    gap:20px;
+}
+.gameBar{
+    position: relative;
+    width: 500px;
+    height: 80%;
+    border: 1px solid black;
+}
